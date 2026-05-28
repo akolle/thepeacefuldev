@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovereign // Local Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      textarea::selection {
+        background: rgba(16, 185, 129, 0.2);
+      }
+      textarea:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#0b0c10] text-slate-100 min-h-screen flex flex-col font-mono selection:bg-emerald-500/20"
+  >
+    <!-- Ambient Top Header (Crank-up contrast from opacity-40 to text-slate-300) -->
+    <header
+      class="w-full max-w-4xl mx-auto px-6 pt-8 flex justify-between items-center text-slate-300"
+    >
+      <div class="flex items-center space-x-3">
+        <!-- Native Tailwind classes for the dot -->
+        <div
+          id="status-dot"
+          class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] transition-all duration-200"
+        ></div>
+        <span class="text-xs uppercase tracking-[0.2em] font-bold"
+          >Sovereign // Local Sandbox</span
+        >
+      </div>
+      <span
+        id="save-status"
+        class="text-xs uppercase tracking-widest text-slate-400 font-medium"
+        >Synced to device</span
+      >
+    </header>
+
+    <!-- Main Workspace -->
+    <main
+      class="flex-1 flex flex-col items-center justify-center max-w-3xl w-full mx-auto px-6 py-12"
+    >
+      <textarea
+        id="workspace"
+        placeholder="What is your primary intention for this block of time? Write it down, release it, and lock it in..."
+        class="w-full h-64 bg-transparent resize-none text-xl leading-relaxed text-slate-100 placeholder-slate-700 border-none focus:ring-0 p-0 font-sans"
+        spellcheck="false"
+        autofocus
+      ></textarea>
+    </main>
+
+    <!-- Inline Engine: Standard Tailwind color tokens -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const workspace = document.getElementById("workspace");
+        const saveStatus = document.getElementById("save-status");
+        const statusDot = document.getElementById("status-dot");
+
+        // 1. Initial Load: Pull data from local memory instantly
+        const savedData = localStorage.getItem("soveriegn_mvp_intent");
+        if (savedData) {
+          workspace.value = savedData;
+        }
+
+        // 2. The Engine: Listen to inputs and write silently
+        workspace.addEventListener("input", (e) => {
+          const currentText = e.target.value;
+
+          // Save to hardware storage instantly
+          localStorage.setItem("soveriegn_mvp_intent", currentText);
+
+          // Update text and swap native color classes instantly
+          saveStatus.textContent = "Saving...";
+          statusDot.className =
+            "w-2.5 h-2.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)] transition-all duration-200";
+
+          // Set a quick bounce back to "Synced" state
+          clearTimeout(workspace.saveTimeout);
+          workspace.saveTimeout = setTimeout(() => {
+            saveStatus.textContent = "Synced to device";
+            statusDot.className =
+              "w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] transition-all duration-200";
+          }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>
