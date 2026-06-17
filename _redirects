@@ -1,0 +1,2 @@
+/app   https://sovereign-app.netlify.app   200!
+/app*  https://sovereign-app.netlify.app/:splat  200!
