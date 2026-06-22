@@ -88,15 +88,14 @@
           </p>
         </div>
 
-        <!-- Wired up Native Netlify Waitlist Form -->
+        <!-- Standardized Netlify Form Definition -->
         <form
           name="waitlist"
           method="POST"
           data-netlify="true"
-          action="/"
           class="space-y-3 pt-2"
         >
-          <!-- Hidden identifier required for Netlify processing bots -->
+          <!-- Explicit hidden field targeting the form name exact match -->
           <input type="hidden" name="form-name" value="waitlist" />
 
           <input
