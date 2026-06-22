@@ -88,27 +88,31 @@
           </p>
         </div>
 
-        <!-- Waitlist Anchor -->
+        <!-- Wired up Native Netlify Waitlist Form -->
         <form
+          name="waitlist"
+          method="POST"
+          data-netlify="true"
           class="space-y-3 pt-2"
-          onsubmit="
-            event.preventDefault();
-            alert('Welcome to the periphery.');
-          "
         >
+          <!-- Hidden identifier required for Netlify processing bots -->
+          <input type="hidden" name="form-name" value="waitlist" />
+
           <input
             type="email"
+            name="email"
             required
             placeholder="Enter your email for early access"
             class="w-full bg-[#0b0c10] border border-[#1f2833]/60 rounded px-3 py-2 text-xs focus:outline-none focus:border-[#ff7b54]/80 text-white placeholder:opacity-40 font-mono transition-all"
           />
           <button
             type="submit"
-            class="w-full bg-[#1f2833]/60 hover:bg-[#1f2833] text-white text-xs uppercase font-mono tracking-widest py-2 rounded border border-[#1f2833] hover:border-[#ff7b54]/40 transition-all"
+            class="w-full bg-[#1f2833]/60 hover:bg-[#1f2833] text-white text-xs uppercase font-mono tracking-widest py-2 rounded border border-[#1f2833] hover:border-[#ff7b54]/40 transition-all cursor-pointer"
           >
             Join the Waitlist
           </button>
-          <div class="mt-6 text-center">
+
+          <div class="mt-6 text-center pt-2">
             <a
               href="/app"
               class="text-xs uppercase tracking-[0.2em] text-slate-400 hover:text-emerald-400 transition-colors duration-200 border-b border-slate-700 hover:border-emerald-500 pb-1"
