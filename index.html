@@ -1,181 +1,128 @@
-<!doctype html>
-<html
-  lang="en"
-  class="bg-[#0b0c10] text-[#c5c6c7] antialiased selection:bg-[#1f2833] selection:text-[#66fcf1]"
+<!-- Header: Subtle Identity Indicator -->
+<header
+  class="w-full flex justify-between items-center border-b border-[#1f2833]/30 pb-6"
 >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Peaceful Dev | Calm Tech & Minimalist Digital Spaces</title>
-    <!-- Tailwind CSS CDN for rapid layout -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Smooth micro-easings for text links */
-      .transition-all {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
-      }
-    </style>
-  </head>
-  <body
-    class="min-h-screen flex flex-col justify-between p-6 md:p-12 max-w-5xl mx-auto font-sans tracking-tight"
+  <div class="flex items-center space-x-3">
+    <!-- Low-contrast accent indicator (cliffside sunrise nuance) -->
+    <div
+      class="w-2.5 h-2.5 rounded-full bg-[#ff7b54] opacity-80 shadow-[0_0_10px_rgba(255,123,84,0.3)]"
+    ></div>
+    <span
+      class="text-sm uppercase tracking-[0.2em] text-[#86c232]/80 font-semibold font-mono"
+      >The Peaceful Dev</span
+    >
+  </div>
+</header>
+
+<!-- Main Section: Bento Layout Strategy -->
+<main class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12 md:my-24 items-start">
+  <!-- Left: Statement Column & Mindful Connect Zone -->
+  <div class="md:col-span-2 space-y-12">
+    <section class="space-y-6">
+      <h1
+        class="text-3xl md:text-5xl font-light text-white leading-tight font-serif tracking-normal"
+      >
+        Building software designed <br /><span class="italic text-[#c5c6c7]/70"
+          >to be closed.</span
+        >
+      </h1>
+      <p class="text-base md:text-lg opacity-80 leading-relaxed max-w-xl">
+        I engineer calm technology and minimalist digital spaces. Modern
+        applications are built like loud, addictive casinos designed to steal
+        your focus. My professional mission is to build the antidote - software
+        that runs entirely locally, respects your attention, and actively
+        protects your mental wellness.
+      </p>
+    </section>
+
+    <!-- Connect Section: Cleaned and focused -->
+    <section
+      id="connect"
+      class="space-y-4 border-t border-[#1f2833]/20 pt-8 max-w-xl"
+    >
+      <h2
+        class="text-xs uppercase tracking-widest font-mono text-[#86c232]/80 font-semibold"
+      >
+        Connect Mindfully
+      </h2>
+      <p class="text-sm opacity-70 leading-relaxed">
+        No infinite scrolls. No urgent pings. Let's change the future of
+        software asynchronously.
+      </p>
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <!-- Studio X / Twitter Link -->
+        <a
+          href="https://x.com/thepeacefuldev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 bg-[#1f2833]/30 border border-[#1f2833]/60 hover:border-[#66fcf1]/50 text-white text-xs font-mono rounded transition-all"
+        >
+          Follow the Build on X
+        </a>
+
+        <!-- Community Reddit Link -->
+        <a
+          href="https://www.reddit.com/user/the-mindful-dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 bg-[#1f2833]/30 border border-[#1f2833]/60 hover:border-[#66fcf1]/50 text-white text-xs font-mono rounded transition-all"
+        >
+          Join the Reddit Community
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Right: Project Focus Card (Sovereign) -->
+  <section
+    class="bg-[#1f2833]/20 border border-[#1f2833]/40 rounded-xl p-6 space-y-6 backdrop-blur-sm"
   >
-    <!-- Header: Subtle Identity Indicator -->
-    <header
-      class="w-full flex justify-between items-center border-b border-[#1f2833]/30 pb-6"
-    >
-      <div class="flex items-center space-x-3">
-        <!-- Low-contrast accent indicator (cliffside sunrise nuance) -->
-        <div
-          class="w-2.5 h-2.5 rounded-full bg-[#ff7b54] opacity-80 shadow-[0_0_10px_rgba(255,123,84,0.3)]"
-        ></div>
-        <span
-          class="text-sm uppercase tracking-[0.2em] text-[#86c232]/80 font-semibold font-mono"
-          >The Peaceful Dev</span
-        >
-      </div>
-
-      <!-- Keep the header clean: Just a minimalist action link or empty space -->
-      <a
-        href="#connect"
-        class="text-xs font-mono opacity-60 hover:opacity-100 hover:text-[#66fcf1] transition-all"
-        >Connect ↗</a
+    <div>
+      <span
+        class="text-[10px] uppercase font-mono tracking-widest text-[#ff7b54]"
+        >Current Project</span
       >
-    </header>
+      <h2 class="text-xl font-medium text-white mt-1">Sovereign</h2>
+      <p class="text-xs opacity-70 mt-2 leading-relaxed">
+        A local-first sensory canvas engineered for absolute focus. No cloud
+        databases. No user profiles. No noise. Your data never leaves your
+        physical disk.
+      </p>
+    </div>
 
-    <!-- Main Section: Bento Layout Strategy -->
-    <main
-      class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12 md:my-24 items-start"
+    <!-- Standardized Netlify Form Definition -->
+    <form
+      name="waitlist"
+      method="POST"
+      data-netlify="true"
+      class="space-y-3 pt-2"
     >
-      <!-- Left: Statement Column & Mindful Connect Zone -->
-      <div class="md:col-span-2 space-y-12">
-        <section class="space-y-6">
-          <h1
-            class="text-3xl md:text-5xl font-light text-white leading-tight font-serif tracking-normal"
-          >
-            Building software designed <br /><span
-              class="italic text-[#c5c6c7]/70"
-              >to be closed.</span
-            >
-          </h1>
-          <p class="text-base md:text-lg opacity-80 leading-relaxed max-w-xl">
-            I engineer calm technology and minimalist digital spaces. Modern
-            applications are built like loud, addictive casinos designed to
-            steal your focus. My professional mission is to build the antidote -
-            software that runs entirely locally, respects your attention, and
-            actively protects your mental wellness.
-          </p>
-        </section>
+      <input type="hidden" name="form-name" value="waitlist" />
 
-        <!-- Connect Section: Moved here for an elegant, spacious bento layout flow -->
-        <section
-          id="connect"
-          class="space-y-4 border-t border-[#1f2833]/20 pt-8 max-w-xl"
-        >
-          <h2
-            class="text-xs uppercase tracking-widest font-mono text-[#86c232]/80 font-semibold"
-          >
-            Connect Mindfully
-          </h2>
-          <p class="text-sm opacity-70 leading-relaxed">
-            No infinite scrolls. No urgent pings. Let's change the future of
-            software asynchronously.
-          </p>
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Enter your email for early access"
+        class="w-full bg-[#0b0c10] border border-[#1f2833]/60 rounded px-3 py-2 text-xs focus:outline-none focus:border-[#ff7b54]/80 text-white placeholder:opacity-40 font-mono transition-all"
+      />
 
-          <div class="flex flex-wrap gap-3 pt-2">
-            <!-- Studio X / Twitter Link -->
-            <a
-              href="https://x.com/thepeacefuldev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-4 py-2 bg-[#1f2833]/30 border border-[#1f2833]/60 hover:border-[#66fcf1]/50 text-white text-xs font-mono rounded transition-all"
-            >
-              Follow the Build on X
-            </a>
-
-            <!-- Community Reddit Link -->
-            <a
-              href="https://reddit.com/r/sovereignapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-4 py-2 bg-[#1f2833]/30 border border-[#1f2833]/60 hover:border-[#66fcf1]/50 text-white text-xs font-mono rounded transition-all"
-            >
-              Join the Reddit Community
-            </a>
-
-            <!-- Minimalist Email Link -->
-            <a
-              href="mailto:hello@thepeacefuldev.com"
-              class="px-4 py-2 bg-[#1f2833]/30 border border-[#1f2833]/60 hover:border-[#ff7b54]/40 text-white text-xs font-mono rounded transition-all"
-            >
-              Drop an Email
-            </a>
-          </div>
-        </section>
-      </div>
-
-      <!-- Right: Project Focus Card (Sovereign) -->
-      <section
-        class="bg-[#1f2833]/20 border border-[#1f2833]/40 rounded-xl p-6 space-y-6 backdrop-blur-sm"
+      <button
+        type="submit"
+        class="w-full bg-[#1f2833]/60 hover:bg-[#1f2833] text-white text-xs uppercase font-mono tracking-widest py-2 rounded border border-[#1f2833] hover:border-[#ff7b54]/40 transition-all cursor-pointer"
       >
-        <div>
-          <span
-            class="text-[10px] uppercase font-mono tracking-widest text-[#ff7b54]"
-            >Current Project</span
-          >
-          <h2 class="text-xl font-medium text-white mt-1">Sovereign</h2>
-          <p class="text-xs opacity-70 mt-2 leading-relaxed">
-            A local-first sensory canvas engineered for absolute focus. No cloud
-            databases. No user profiles. No noise. Your data never leaves your
-            physical disk.
-          </p>
-        </div>
+        Join the Waitlist
+      </button>
 
-        <!-- Standardized Netlify Form Definition -->
-        <form
-          name="waitlist"
-          method="POST"
-          data-netlify="true"
-          class="space-y-3 pt-2"
+      <div class="mt-6 text-center pt-2">
+        <a
+          href="/app"
+          class="text-xs uppercase tracking-[0.2em] text-slate-400 hover:text-emerald-400 transition-colors duration-200 border-b border-slate-700 hover:border-emerald-500 pb-1"
         >
-          <input type="hidden" name="form-name" value="waitlist" />
-
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Enter your email for early access"
-            class="w-full bg-[#0b0c10] border border-[#1f2833]/60 rounded px-3 py-2 text-xs focus:outline-none focus:border-[#ff7b54]/80 text-white placeholder:opacity-40 font-mono transition-all"
-          />
-
-          <button
-            type="submit"
-            class="w-full bg-[#1f2833]/60 hover:bg-[#1f2833] text-white text-xs uppercase font-mono tracking-widest py-2 rounded border border-[#1f2833] hover:border-[#ff7b54]/40 transition-all cursor-pointer"
-          >
-            Join the Waitlist
-          </button>
-
-          <div class="mt-6 text-center pt-2">
-            <a
-              href="/app"
-              class="text-xs uppercase tracking-[0.2em] text-slate-400 hover:text-emerald-400 transition-colors duration-200 border-b border-slate-700 hover:border-emerald-500 pb-1"
-            >
-              Try the Sovereign Local Workspace ↗
-            </a>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <!-- Footer: Grounding Text -->
-    <footer
-      class="w-full border-t border-[#1f2833]/20 pt-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono opacity-50 space-y-2 md:space-y-0"
-    >
-      <div>&copy; 2026 THE PEACEFUL DEV. ALL RIGHTS RESERVED.</div>
-      <div class="tracking-widest uppercase text-right">
-        Local-First // Privacy-First // Human-Centric
+          Try the Sovereign Local Workspace ↗
+        </a>
       </div>
-    </footer>
-  </body>
-</html>
+    </form>
+  </section>
+</main>
