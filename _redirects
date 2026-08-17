@@ -1,2 +1,2 @@
-/app   https://breathe.netlify.app   200!
-/app*  https://breathe.netlify.app/:splat  200!
+/app   https://breathe-calm.netlify.app   200!
+/app*  https://breathe-calm.netlify.app/:splat  200!
